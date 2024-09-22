@@ -20,5 +20,5 @@ public interface StudentMapper {
     void deleteById(Integer id);
 
     @Update("update student set name = #{name},age = #{age},gender = #{gender},update_time = #{updateTime} where id = #{id}")
-    void update(Student student);
+    void updateById(Student student);
 }

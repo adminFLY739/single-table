@@ -37,10 +37,10 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void update(Integer id, Student student) {
+    public void updateById(Integer id, Student student) {
         Student temp = studentMapper.selectById(id);
         student.setId(temp.getId());
         student.setUpdateTime(LocalDateTime.now());
-        studentMapper.update(student);
+        studentMapper.updateById(student);
     }
 }
