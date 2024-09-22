@@ -39,10 +39,10 @@ public class StudentController {
         return Result.success();
     }
 
-    @PutMapping("/students/{id}")
-    public Result updateById(@PathVariable("id") Integer id, @RequestBody Student student) {
-        log.info("updateById日志");
-        studentService.updateById(id, student);
+    @PutMapping("/students")
+    public Result update(@RequestBody Student student) {
+        log.info("update日志");
+        studentService.update(student);
         return Result.success();
     }
 }

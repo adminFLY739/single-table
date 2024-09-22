@@ -13,5 +13,5 @@ public interface StudentService {
 
     void deleteById(Integer id);
 
-    void updateById(Integer id, Student student);
+    void update(Student student);
 }
